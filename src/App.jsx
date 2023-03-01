@@ -7,7 +7,7 @@ export default function App() {
     const [count,setCount] = React.useState(0)
     const [dice, setDice] = React.useState(allNewDice())
     const [tenzies, setTenzies] = React.useState(false)
-    const [startGame,setStartGame] = React.useState("")
+    const [startGame,setStartGame] = React.useState(new Date())
     const [endGame,setEndGame] = React.useState("")
     
     React.useEffect(() => {
@@ -38,7 +38,6 @@ export default function App() {
     
     function rollDice() {
         if(!tenzies) {
-            setStartGame(new Date())
             setCount(prevCount => prevCount + 1)
             setDice(oldDice => oldDice.map(die => {
                 return die.isHeld ? 
@@ -77,7 +76,7 @@ export default function App() {
             <div className="dice-container">
                 {diceElements}
             </div>
-            {tenzies && <h2 className="winning-text">You needed {(endGame - startGame) / 100 } seconds and {count} rolls to win!</h2>}
+            {tenzies && <h2 className="winning-text">You needed {(endGame - startGame) / 1000 } seconds and {count} rolls to win!</h2>}
             
             <button 
                 className="roll-dice" 
