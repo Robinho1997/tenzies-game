@@ -1,5 +1,5 @@
 
-Deployed site : https://celebrated-hotteok-a3b3bb.netlify.app
+Deployed site : https://heroic-gumdrop-932405.netlify.app
 
 
 I decided to build the game Tenzies where the player has 10 dice and the goal is that all dice have the same number.
