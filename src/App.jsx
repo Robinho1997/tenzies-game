@@ -46,6 +46,7 @@ export default function App() {
             }))
         } else {
             setTenzies(false)
+            setStartGame(new Date())
             setDice(allNewDice())
         }
     }
